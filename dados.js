@@ -261,69 +261,97 @@ public class Main {
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Segundo Kurose (2021), referente à transmissão de pacotes, é correto afirmar que:",
+        resposta: 'c',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "o modo de comunicação orientado a conexão não exige a confirmação do recebimento de pacotes.",
+            b: "no modo orientado a conexão, os pacotes são enviados independentemente do estado da rede.",
+            c: "no modo orientado a conexão, cliente e servidor precisam primeiro se apresentar e estabelecer uma conexão TCP.",
+            d: "o modo sem conexão utiliza um protocolo mais robusto, tornando-o mais adequado para redes de alta velocidade.",
+            e: "no modo orientado a conexão, a transmissão de dados ocorre sem a necessidade de estabelecer uma conexão prévia, proporcionando maior eficiência na entrega de pacotes."
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Considere o código abaixo em linguagem Python." +
+        `<code>
+def calculo_misterioso(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * calculo_misterioso(n-1)
+
+numero = 5
+resultado = calculo_misterioso(numero)
+print(f'O resultado é: {resultado}')
+        </code>` +
+        "Assinale a opção que apresenta corretamente o resultado que será exibido na tela após a execução do código acima.",
+        resposta: 'a',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "O resultado é: 120",
+            b: "O resultado é: 20",
+            c: "O resultado é: 1",
+            d: "O resultado é: 60",
+            e: "O resultado é: 720"
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Considere o código abaixo em linguagem Python, que implementa um algoritmo de ordenação." +
+        `<code>
+def ordenacao_especial(lista):
+    n = len(lista)
+
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if lista[j] > lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+
+    return lista
+
+lista_entrada = [4, 7, 1, 9, 3, 5, 8]
+lista_ordenada = ordenacao_especial(lista_entrada)
+print(f'A lista ordenada é: {lista_ordenada}')
+        </code>` +
+        "Assinale a opção que apresenta corretamente o método de ordenação implementado pelo código acima.",
+        resposta: 'b',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "Ordenação em Heap (Heapsort).",
+            b: "Ordenação Bolha (Bubblesort).",
+            c: "Ordenação por intercalação (Mergesort).",
+            d: "Ordenação por Inserção (Insertionsort).",
+            e: "Ordenação Rápida (Quicksort)."
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Segundo Ward (2015), assinale a opção correta acerca do local de armazenamento das senhas criptografadas para usuários dos sistemas Linux.",
+        resposta: 'c',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "/etc/password",
+            b: "/etc/user",
+            c: "/etc/shadow",
+            d: "/etc/group",
+            e: "/etc/systemd"
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Segundo Tanenmbaum (2013), qual método está diretamente associado à arquitetura de computadores paralela?",
+        resposta: 'a',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "Processador SIMD",
+            b: "Máquina de Turing",
+            c: "Algoritmo de Ordenação Bubble Sort",
+            d: "Multiprogramação",
+            e: "Máquina de Von Neumann"
         }
     },
     {
-        pergunta: "",
-        resposta: '',
+        pergunta: "Segundo Barbieri (2011), a árvore de decisão é uma técnica utilizada em Data Mining. Assinale a opção que apresenta corretamente a abordagem empregada na utilização dessa técnica correspondente à criação de regras para aplicação em eventos futuros.",
+        resposta: 'c',
         alternativas : {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
-            e: ""
+            a: "Estratificação.",
+            b: "Identificação de Interações.",
+            c: "Predição.",
+            d: "Redução de Dados.",
+            e: "Segmentação."
         }
     },
     {

@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
+.menu {
+    background-color: navy;
+    padding: 4px;
+}
+
 .alternativas {
     list-style-type: lower-alpha;
 }

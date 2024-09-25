@@ -4,7 +4,8 @@ const botãoResponder = document.getElementById("botão-responder");
 const containerPergunta = document.getElementById("container-pergunta");
 const botãoAnterior = document.getElementById("botão-anterior");
 const botãoPróxima = document.getElementById("botão-próxima");
-let iterador = 0;
+const inputPergunta = document.getElementById("input-pergunta");
+let iterador = 0; //Global
 
 const gerarPergunta = (iterador) => {
     alternativas.forEach(alternativa => alternativa.nextElementSibling.className = "")
@@ -24,15 +25,44 @@ const responder = (iterador) => {
 botãoPróxima.addEventListener("click", () => {
     iterador = iterador + 1;
     gerarPergunta(iterador);
+    if(iterador >= perguntas.length - 1) {
+        botãoPróxima.disabled = true;
+    } else {
+        botãoAnterior.disabled = false;
+    }
 });
 
 botãoAnterior.addEventListener("click", () => {
     iterador = iterador - 1;
     gerarPergunta(iterador);
+    if(iterador <= 0) {
+        botãoAnterior.disabled = true;
+    } else {
+        botãoPróxima.disabled = false;
+    }
 });
 
 botãoResponder.addEventListener("click", () => {
     responder(iterador);
 });
+
+inputPergunta.addEventListener("blur", () => {
+    if((inputPergunta.valueAsNumber - 1) < 0 || (inputPergunta.valueAsNumber - 1) > perguntas.length - 1) {
+        alert(`Insira um número entre 1 e ${perguntas.length}`)
+    } else {
+        iterador = inputPergunta.valueAsNumber - 1;
+        gerarPergunta(iterador);
+        if(iterador <= 0) {
+            botãoAnterior.disabled = true;
+            botãoPróxima.disabled = false;
+        } else if(iterador >= perguntas.length - 1) {
+            botãoPróxima.disabled = true;
+            botãoAnterior.disabled = false;
+        } else {
+            botãoAnterior.disabled = false;
+            botãoPróxima.disabled = false;
+        }
+    }
+})
 
 gerarPergunta(iterador);//Default
