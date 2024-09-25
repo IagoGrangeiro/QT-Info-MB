@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Técnico - Informática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <button id="botão-anterior">Anterior</button>
+        <button id="botão-próxima">Próxima</button>
+        <input type="number" id="inputPergunta">
+    </div>
+
+    <div id="container-pergunta" class="pergunta-container">
+        <p id="enunciado"></p>
+        
+        <ol class="alternativas">
+            <li>
+                <input type="radio" name="alternativas" id="a" value="a" required><label for="a"></label>
+            </li>
+            <li>
+                <input type="radio" name="alternativas" id="b" value="b" required><label for="b"></label>
+            </li>
+            <li>
+                <input type="radio" name="alternativas" id="c" value="c" required><label for="c"></label>
+            </li>
+            <li>
+                <input type="radio" name="alternativas" id="d" value="d" required><label for="d"></label>
+            </li>
+            <li>
+                <input type="radio" name="alternativas" id="e" value="e" required><label for="e"></label>
+            </li>
+        </ol>
+
+        <button id="botão-responder">Responder</button>
+        
+    </div>
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
