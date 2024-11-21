@@ -5,8 +5,8 @@ export type Pergunta = {
     b: string,
     c: string,
     d: string,
-    e: string,
+    e: string | null,
     resposta: string,
     assunto: string,
-    ano: string
+    concurso: string
 }

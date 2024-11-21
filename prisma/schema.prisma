@@ -11,13 +11,16 @@ datasource db {
 }
 
 model Assuntos {
-  id        Int     @id @default(autoincrement())
-  assunto   String
+  id            Int            @id @default(autoincrement())
+  assunto       String
+  perguntas     Perguntas[]
 }
 
 model Concursos {
-  id        Int     @id @default(autoincrement())
-  concurso  String  
+  id            Int           @id @default(autoincrement())
+  concurso      String        @unique
+  perguntas     Perguntas[]   
+  perguntasId   Int
 }
 
 model Perguntas {
@@ -29,8 +32,7 @@ model Perguntas {
   d           String
   e           String?
   resposta    String
-  assunto     Assuntos    @relation(fields: [assuntoid], references: [id])
-  assuntoid   Int       
-  concurso    Concursos   @relation(fields: [concursoid], references: [id])
-  concursoid  Int
+  assuntos    Assuntos[]
+  concurso    Concursos   @relation(fields:[concursoId], references: [id])
+  concursoId  Int
 }
