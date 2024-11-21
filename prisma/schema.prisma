@@ -10,8 +10,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id      String   @id @default(cuid())
-  name    String
+model Assuntos {
+  id        Int     @id @default(autoincrement())
+  assunto   String
 }
 
+model Concursos {
+  id        Int     @id @default(autoincrement())
+  concurso  String  
+}
+
+model Perguntas {
+  id          Int         @id @default(autoincrement())
+  pergunta    String  
+  a           String
+  b           String
+  c           String
+  d           String
+  e           String?
+  resposta    String
+  assunto     Assuntos    @relation(fields: [assuntoid], references: [id])
+  assuntoid   Int       
+  concurso    Concursos   @relation(fields: [concursoid], references: [id])
+  concursoid  Int
+}

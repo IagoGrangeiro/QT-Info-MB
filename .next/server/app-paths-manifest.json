@@ -1,5 +1,4 @@
 {
-  "/gerenciador/page": "app/gerenciador/page.js",
-  "/page": "app/page.js",
-  "/teste/page": "app/teste/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
 }
